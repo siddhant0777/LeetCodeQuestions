@@ -1,0 +1,26 @@
+https://leetcode.com/problems/reverse-string-ii/
+===============================================================
+
+
+class Solution {
+    public String reverseStr(String s, int k) {
+        int length = s.length();
+        StringBuilder result = new StringBuilder();
+
+        for (int i = 0; i < length; i += 2 * k) {
+            // Determine the end index for the current segment
+            int end = Math.min(i + k, length);
+
+            // Reverse the substring from i to end
+            String reversedSegment = new StringBuilder(s.substring(i, end)).reverse().toString();
+
+            // Append the reversed substring to the result
+            result.append(reversedSegment);
+
+            // Append the remaining characters in the segment (if any)
+            result.append(s, end, Math.min(i + 2 * k, length));
+        }
+
+        return result.toString();
+    }
+}
