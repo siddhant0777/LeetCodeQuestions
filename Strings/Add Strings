@@ -1,0 +1,14 @@
+https://leetcode.com/problems/add-strings/description/
+====================================================================
+
+class Solution {
+    public String addStrings(String num1, String num2) {
+
+        int n1=Integer.parseInt(num1); //To convert String to int
+        int n2=Integer.parseInt(num2);
+        
+        int n3=n1+n2;
+        String num3=num1+num2;
+        return String.valueOf(n3); // To convert int to String
+    }
+}
