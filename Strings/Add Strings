@@ -22,3 +22,26 @@ class Solution {
         return result.toString();
     }
 }
+
+=============================================================================
+
+The below approach works for small integers but fails for large integer inputs , look at the runtime exception 
+
+class Solution {
+    public String addStrings(String num1, String num2) {
+        int num4=Integer.parseInt(num1);
+        int num5=Integer.parseInt(num2);
+        int num6=num4+num5;
+        String num7=String.valueOf(num6);
+        return num7;
+    }
+}
+
+java.lang.NumberFormatException: For input string: "6913259244"
+  at line 67, java.base/java.lang.NumberFormatException.forInputString
+  at line 661, java.base/java.lang.Integer.parseInt
+  at line 777, java.base/java.lang.Integer.parseInt
+  at line 3, Solution.addStrings
+  at line 56, __DriverSolution__.__helper__
+  at line 89, __Driver__.main
+=========================================================================================
