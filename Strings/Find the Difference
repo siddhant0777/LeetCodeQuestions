@@ -10,3 +10,18 @@ class Solution {
         return c;
     }
 }
+================================
+
+a ^ a = 0 (Any number XORed with itself results in 0).
+a ^ 0 = a (Any number XORed with 0 results in the number itself).
+
+Logic:
+
+The idea is to XOR all characters in s and t.
+Since XOR cancels out matching characters, only the extra character in t will remain.
+Algorithm:
+
+Initialize c to 0. This variable will store the result of XOR operations.
+XOR all characters in string s with c.
+XOR all characters in string t with c.
+After processing both strings, c will hold the ASCII value of the extra character in t.
